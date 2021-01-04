@@ -28,7 +28,19 @@
 		</div>
 		
 		<center>
-			<button type="button" class="btn btn-success" style="width: 150px;">Siguiente</button>
+			<button type="button" class="btn btn-success" style="width: 150px;" v-on:click="finish()">
+				Finalizar
+			</button>
 		</center>
 	</div>
 </template>
+
+<script>
+	export default {
+		methods: {
+			finish: function() {
+				alert('Datos Enviados');
+			}
+		}
+	}
+</script>

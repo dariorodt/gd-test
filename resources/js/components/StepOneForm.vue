@@ -19,7 +19,19 @@
 		<label class="text-center"><input type="radio" name="can_send_email" value="1"> Si <input type="radio" name="can_send_email" value="0"> No</label>
 		
 		<center>
-			<button type="button" class="btn btn-success" style="width: 150px;">Siguiente</button>
+			<button type="button" class="btn btn-success" style="width: 150px;" v-on:click="goNetx()">
+				Siguiente
+			</button>
 		</center>
 	</div>
 </template>
+
+<script>
+	export default {
+		methods: {
+			goNetx: function() {
+				this.$parent.current++;
+			}
+		}
+	}
+</script>

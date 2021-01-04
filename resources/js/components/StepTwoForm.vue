@@ -29,10 +29,22 @@
 		</div>
 		
 		<center>
-			<button type="button" class="btn btn-success" style="width: 150px;">Siguiente</button>
+			<button type="button" class="btn btn-success" style="width: 150px;" v-on:click="goNext()">
+				Siguiente
+			</button>
 		</center>
 	</div>
 </template>
+
+<script>
+	export default {
+		methods: {
+			goNext: function() {
+				this.$parent.current++;
+			}
+		}
+	}
+</script>
 
 <style>
 	label {
